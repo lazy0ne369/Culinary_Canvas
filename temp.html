@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes | Culinary Canvas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="light">
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="logo"><a href="recipes-page.html">Culinary <span>Canvas</span></a></div>
+            <ul class="nav-links">
+                <li><a href="Home.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="recipes-page.html" class="nav-link active">Recipes</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <input type="checkbox" id="theme-toggle-checkbox" class="theme-toggle-checkbox">
+                <label for="theme-toggle-checkbox" class="theme-toggle-label">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </label>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1>Our Recipes</h1>
+                <p>Discover culinary excellence with our collection of handcrafted recipes</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recipe Browse Section -->
+    <section class="section">
+        <div class="container">
+            <div class="recipes-header">
+                <h2>Browse All Recipes</h2>
+            </div>
+            <div class="recipes-grid">
+                <!-- Recipe Cards -->
+                <div class="recipe-card" data-id="1">
+                    <div class="recipe-card-image">
+                        <img src="https://api.placeholder.com/400/320" alt="Lemon Garlic Roast Chicken">
+                    </div>
+                    <div class="recipe-card-content">
+                        <h3 class="recipe-card-title">Lemon Garlic Roast Chicken</h3>
+                        <div class="recipe-card-meta">
+                            <div>60 mins</div>
+                            <div>Medium</div>
+                        </div>
+                        <p>A juicy roast chicken infused with bright lemon and aromatic garlic.</p>
+                    </div>
+                </div>
+                <div class="recipe-card" data-id="2">
+                    <div class="recipe-card-image">
+                        <img src="https://api.placeholder.com/400/320" alt="Creamy Mushroom Risotto">
+                    </div>
+                    <div class="recipe-card-content">
+                        <h3 class="recipe-card-title">Creamy Mushroom Risotto</h3>
+                        <div class="recipe-card-meta">
+                            <div>45 mins</div>
+                            <div>Medium</div>
+                        </div>
+                        <p>Rich and creamy risotto with earthy mushrooms and Parmesan.</p>
+                    </div>
+                </div>
+                <!-- Add more recipe cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Recipe Modal -->
+    <div class="recipe-modal">
+        <div class="modal-header">
+            <h2 class="modal-title"></h2>
+            <span class="modal-close">&times;</span>
+        </div>
+        <div class="modal-body">
+            <img class="modal-image" src="" alt="Recipe Image">
+            <h3>Ingredients:</h3>
+            <ul class="modal-ingredients"></ul>
+            <h3>Instructions:</h3>
+            <p class="modal-instructions"></p>
+        </div>
+    </div>
+
+    <!-- Backdrop -->
+    <div class="recipe-modal-backdrop"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Culinary Canvas. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const recipes = [
+            {
+                id: 1,
+                title: "Lemon Garlic Roast Chicken",
+                ingredients: ["Chicken", "Lemon", "Garlic", "Olive Oil", "Salt", "Pepper"],
+                instructions: "Preheat oven to 375°F. Rub chicken with garlic and lemon. Roast for 60 minutes.",
+                image: "https://api.placeholder.com/400/320"
+            },
+            {
+                id: 2,
+                title: "Creamy Mushroom Risotto",
+                ingredients: ["Rice", "Mushrooms", "Parmesan", "Onion", "Garlic", "Butter"],
+                instructions: "Cook onions and garlic. Add rice and broth. Stir until creamy.",
+                image: "https://api.placeholder.com/400/320"
+            }
+        ];
+
+        const recipeCards = document.querySelectorAll(".recipe-card");
+        const modal = document.querySelector(".recipe-modal");
+        const modalBackdrop = document.querySelector(".recipe-modal-backdrop");
+        const modalTitle = modal.querySelector(".modal-title");
+        const modalIngredients = modal.querySelector(".modal-ingredients");
+        const modalInstructions = modal.querySelector(".modal-instructions");
+        const modalImage = modal.querySelector(".modal-image");
+        const modalClose = modal.querySelector(".modal-close");
+
+        // Open Modal
+        recipeCards.forEach(card => {
+            card.addEventListener("click", () => {
+                const recipeId = parseInt(card.getAttribute("data-id"));
+                const recipe = recipes.find(r => r.id === recipeId);
+
+                if (recipe) {
+                    modalTitle.textContent = recipe.title;
+                    modalIngredients.innerHTML = recipe.ingredients.map(ing => `<li>${ing}</li>`).join("");
+                    modalInstructions.textContent = recipe.instructions;
+                    modalImage.src = recipe.image;
+
+                    modal.classList.add("show");
+                    modalBackdrop.classList.add("show");
+                }
+            });
+        });
+
+        // Close Modal
+        const closeModal = () => {
+            modal.classList.remove("show");
+            modalBackdrop.classList.remove("show");
+        };
+
+        modalClose.addEventListener("click", closeModal);
+        modalBackdrop.addEventListener("click", closeModal);
+    </script>
+</body>
+</html>
